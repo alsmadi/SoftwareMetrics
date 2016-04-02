@@ -1382,7 +1382,8 @@ if(linetrimmed.StartsWith("if")||linetrimmed.StartsWith("switch"))
 			}
 			else
 			{
-                this.txtDirectory.Text = "C:\\SWMetrics";
+             //   this.txtDirectory.Text = "C:\\SWMetrics";
+               // this.txtDirectory.Text = this.txtDirectory.Text;
                 if (Directory.Exists(this.txtDirectory.Text))
 				{
 				
@@ -1390,8 +1391,8 @@ if(linetrimmed.StartsWith("if")||linetrimmed.StartsWith("switch"))
 				//	progressBar1.Value += 1;
 	SaveFileDialog saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 		//	string logFile;
-					saveFileDialog1.DefaultExt = "rtf";
-			saveFileDialog1.Filter = "rtf files (*.rtf)|*.rtf";
+					saveFileDialog1.DefaultExt = "csv";
+			saveFileDialog1.Filter = "CSV files (*.csv)|*.csv";
 				saveFileDialog1.Title = "Saving the metrics to a file";
 					saveFileDialog1.ShowDialog();
 					if(saveFileDialog1.FileName != "")
